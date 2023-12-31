@@ -13,6 +13,7 @@ git clone "https://github.com/Fizzyhex/rs-guessing-game.git"
 2. Use `cargo` to build the project
 
 ```sh
+cd rs-guessing-game
 cargo build --release
 ```
 
