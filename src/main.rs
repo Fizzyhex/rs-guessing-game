@@ -1,19 +1,23 @@
-use std::io::{Read, stdin, stdout};
+use std::io;
+use std::io::prelude::*;
 use rand::Rng;
 use std::cmp::Ordering;
-use std::io::prelude::*;
 
 fn pause(message: &str) {
+    let mut stdout = io::stdout();
+    let mut stdin = io::stdin();
+
     // Using write! allows us to directly write to the output and stop the cursor from going onto a newline
-    write!(stdout(), "{}", message).unwrap();
+    write!(stdout, "{}", message).unwrap();
     // Flush the output to ensure the message is displayed immediately
-    stdout().flush().unwrap();
+    stdout.flush().unwrap();
     // Read a single byte - and then discard as we don't need it.
     // This will require the user to type something before we continue
-    let _ = stdin().read(&mut [0u8]).unwrap();
+    let _ = stdin.read(&mut [0u8]).unwrap();
 }
 
 fn main() {
+    let stdin = io::stdin();
     let secret_number = rand::thread_rng().gen_range(1..=100); 
     println!("Guess the number! (0-100)");
 
@@ -22,7 +26,7 @@ fn main() {
 
         let mut guess = String::new();
     
-        stdin()
+        stdin
             .read_line(&mut guess)
             .expect("Failed to read line");
     
