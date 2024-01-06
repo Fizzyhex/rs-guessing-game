@@ -13,7 +13,7 @@ fn pause(message: &str) {
     stdout.flush().unwrap();
     // Read a single byte - and then discard as we don't need it.
     // This will require the user to type something before we continue
-    let _ = stdin.read(&mut [0u8]).unwrap();
+    stdin.read(&mut [0u8]).unwrap();
 }
 
 fn main() {
