@@ -50,7 +50,7 @@ fn main() {
             }
         }
 
-        println!("")
+        println!("");
     }
 
     pause("Press enter to exit...");
