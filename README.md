@@ -4,13 +4,13 @@ A simple guessing based on section [📕 2. Programming a Guessing Game](https:/
 
 ## Build Instructions
 
-1. Clone this repository (e.g, by using Git)
+1. Clone this repository (e.g with git):
 
 ```sh
 git clone "https://github.com/Fizzyhex/rs-guessing-game.git" 
 ```
 
-2. Use `cargo` to build the project
+2. Use `cargo` to build the project:
 
 ```sh
 cd rs-guessing-game
